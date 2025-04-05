@@ -1,49 +1,225 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-  <!-- 
-  Code Made By Husen
-  Instagram : @husenfahmi._
-  -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
-    <title>Happy Birth Day</title>
-    <style>html { scroll-behavior: smooth; } * { padding: 0; margin: 0; font-family: "Ubuntu"; color: rgb(56, 56, 56); } body { background: wheat; /* background-image: url("https://wallpaper.dog/large/10871886.png"); */ background-image: linear-gradient(#ff71c0, #b983ff, #5aaeff); background-position: center; background-size: cover; overflow: hidden; overflow: hidden; } .open { background-image: linear-gradient(#ff71c0, #b983ff); height: 100vh; width: 100vw; position: fixed; top: 0; display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; z-index: 1; transition: 0.5s all ease; } .open h2 { /* margin: 0 30px; */ margin-bottom: 20px; color: rgb(56, 56, 56); text-align: center; max-width: 600px; } .open .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); text-align: center; } .open .card h3 { margin-top: 20px; } .open .card img { height: 100px; } .atas { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; } .atas img { height: 200px; margin-bottom: 50px; padding: 20px 30px; background: white; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); } .atas h2 { font-size: 1.5em; padding: 20px 30px; background: white; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); } p { display: block; text-align: center; color: rgb(56, 56, 56); background: white; font-weight: bold; font-size: 1.5em; padding: 50px 30px; margin: 40px 20px; border-radius: 20px; box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123); } p.wm { width: fit-content; margin-top: 100px; margin-bottom: 0; padding: 10px 20px; border-radius: 10px 10px 0 0; font-weight: 500; font-size: .9em; color: red; } p.wm a { color: red; text-decoration: none; } .material-icons-sharp { color: red; font-size: 30px; transform: translateY(5px); animation: kenyal 2s ease infinite; cursor: pointer; } @keyframes kenyal { 0% { transform: scale(1) translateY(5px); } 50% { transform: scale(1.2) translateY(5px); } 100% { transform: scale(1) translateY(5px); } }</style>
-  </head>
-  <body class="body">
-    <div class="open">
-      <div class="card">
-        <h2>sedikit pesan untukmu</h2>
-          <img onclick="mulai()" src="https://dekatutorial.github.io/spesial_mail.png" alt="" srcset="" />
-        <h3>Tekan untuk membuka</h3>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+  <title>Happy Birth Day</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: "Ubuntu";
+      color: rgb(56, 56, 56);
+    }
+
+    body {
+      background: wheat;
+      background-image: linear-gradient(#ff71c0, #b983ff, #5aaeff);
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .open {
+      background-image: linear-gradient(#ff71c0, #b983ff);
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      z-index: 1;
+      transition: 0.5s all ease;
+    }
+
+    .open h2 {
+      margin-bottom: 20px;
+      color: rgb(56, 56, 56);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .open .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+      text-align: center;
+    }
+
+    .open .card h3 {
+      margin-top: 20px;
+    }
+
+    .open .card img {
+      height: 100px;
+      cursor: pointer;
+    }
+
+    .atas {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .atas img {
+      height: 200px;
+      margin-bottom: 50px;
+      padding: 20px 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+    }
+
+    .atas h2 {
+      font-size: 1.5em;
+      padding: 20px 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+    }
+
+    p {
+      display: block;
+      text-align: center;
+      background: white;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 50px 30px;
+      margin: 40px 20px;
+      border-radius: 20px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.123);
+    }
+
+    p.wm {
+      width: fit-content;
+      margin-top: 100px;
+      margin-bottom: 0;
+      padding: 10px 20px;
+      border-radius: 10px 10px 0 0;
+      font-weight: 500;
+      font-size: .9em;
+      color: red;
+    }
+
+    p.wm a {
+      color: red;
+      text-decoration: none;
+    }
+
+    .material-icons-sharp {
+      color: red;
+      font-size: 30px;
+      transform: translateY(5px);
+      animation: kenyal 2s ease infinite;
+      cursor: pointer;
+    }
+
+    @keyframes kenyal {
+      0% {
+        transform: scale(1) translateY(5px);
+      }
+
+      50% {
+        transform: scale(1.2) translateY(5px);
+      }
+
+      100% {
+        transform: scale(1) translateY(5px);
+      }
+    }
+  </style>
+</head>
+
+<body class="body">
+
+  <div class="open">
+    <div class="card">
+      <h2>sedikit pesan untukmu</h2>
+      <img onclick="mulai()" src="https://dekatutorial.github.io/spesial_mail.png" alt="Buka" />
+      <h3>Tekan untuk membuka</h3>
     </div>
-    <div class="atas" id="atas">
-      <img onclick="mulai()" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG5qOXB0OGV5dTkxeTV3d3Z3amN2am03ZjA3M2Z4dm5tOXo3YnhjbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gkLG3Ki3OTXDwVb4rY/giphy.gif" alt="" />
-      <h2>Scroll kebawah ya</h2>
-    </div>
+  </div>
 
-    <p data-aos="zoom-in"> Haii sayang makasi uda scan ini </p>
-    <p data-aos="zoom-in"> pertama aku mau minta maaf atas semua kekurangan aku yang bikin kamu begini,aku gak nyalahin kamu karena emang dari awal harusnya aku gak beraniin diri untuk punya pacar dengan kekurangan aku ini</p>
-    <p data-aos="zoom-in"> aku berterima kasih ke kamu,udah mau temenin aku dan nerima aku walau hanya sebentar semua kenangan kita,suka dan luka ini akan aku kenang</p>
-    <p data-aos="zoom-in"> terima kasih udah jadi cewe pertama aku dan mungkin sekaligus cewe terakhir di masa remaja ini,semoga kamu bisa jadi lebih baik lagi dan lebih bahagia lagi yaa</p>
-    
-    <p data-aos="zoom-in">Pencet love nya 
-      <i onclick="tanya()" class="material-icons-sharp"> favorite </i></p>
+  <div class="atas" id="atas">
+    <img onclick="mulai()" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG5qOXB0OGV5dTkxeTV3d3Z3amN2am03ZjA3M2Z4dm5tOXo3YnhjbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gkLG3Ki3OTXDwVb4rY/giphy.gif" alt="Giphy" />
+    <h2>Scroll kebawah ya</h2>
+  </div>
 
-    <script>
+  <p data-aos="zoom-in">Haii sayang makasi uda scan ini</p>
+  <p data-aos="zoom-in">pertama aku mau minta maaf atas semua kekurangan aku yang bikin kamu begini, aku gak nyalahin kamu karena emang dari awal harusnya aku gak beraniin diri untuk punya pacar dengan kekurangan aku ini</p>
+  <p data-aos="zoom-in">aku berterima kasih ke kamu, udah mau temenin aku dan nerima aku walau hanya sebentar semua kenangan kita, suka dan luka ini akan aku kenang</p>
+  <p data-aos="zoom-in">terima kasih udah jadi cewe pertama aku dan mungkin sekaligus cewe terakhir di masa remaja ini, semoga kamu bisa jadi lebih baik lagi dan lebih bahagia lagi yaa</p>
 
-      var musik = "";
+  <p data-aos="zoom-in">Pencet love nya
+    <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
+  </p>
 
-    </script>
-    <script> AOS.init({ once: true, }); </script> <script> if(musik == "") { musik = "https://rr5---sn-npoeens7.googlevideo.com/videoplayback?expire=1743734501&ei=hfLuZ8SCC_ygi9oP3Jmi6AQ&ip=2a02%3A8071%3A885%3Ac7e0%3A807c%3Acb72%3A1afa%3A4916&id=o-AJfsDdIpy3Ti7aBgfe0YBFhRbpq6NzKlIfVVMi8YMwWK&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AccgBcPg0sT-xJilTiVui306212aF6hAdv9e1mYMefDRRynjrrkVQHtQDaI0vVXadD2WKmv28gkX80nC&spc=_S3wKqIp6yVPnTMqrNLhQ8ZFI2KAv-P8vOFq4ZWaWCUCpDvduIv2Zh5s-hWkV_9pAt8&vprv=1&svpuc=1&mime=audio%2Fmp4&ns=pitr21nOqoq-x72uTL7u3xUQ&rqh=1&gir=yes&clen=1032595&dur=63.715&lmt=1675383476601990&keepalive=yes&fexp=24350590,24350737,24350827,24350961,24351147,24351149,24351173,24351283,24351398,24351415,24351422,24351470,24351528,24351545,51331020,51435733&c=MWEB&sefc=1&txp=6218224&n=QONGGlfz2EUYSw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgUwbXssRTZg4IqOYS8LPydYrB6b5bwPx9QfUKHcJh7Y8CIQCfLzUBHHPUo-xd_oSMpCczFS8HZ5Mdr1YvwdVG_oagQg%3D%3D&redirect_counter=1&cm2rm=sn-h0jse7z&rrc=80&req_id=34bd5b46e4bda3ee&cms_redirect=yes&met=1743712914,&mh=7I&mip=103.25.195.69&mm=34&mn=sn-npoeens7&ms=ltu&mt=1743712500&mv=u&mvi=5&pl=24&rms=ltu,au&lsparams=met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=ACuhMU0wRgIhAM3HtksP3-xcAI54Gvaf1y2Z6G_AFwRi_1ymxceUqp2SAiEA7bfoAffKxXOTejJYH26sv-bXoSLG1oruYsK37u1Ddak%3D"; } var audio = new Audio(musik); audio.loop = true; audio.autoplay = true; function mulai() { audio.play(); document.querySelector(".open").style = "opacity: 0;"; document.querySelector(".body").style = "overflow-y: scroll;"; setTimeout(function () { document.querySelector(".open").style.display = "none"; }, 1000); } function wa(isi) { window.open("https://api.whatsapp.com/send?text=  " + isi); } async function tanya() { var { value: kado } = await swal.fire({ title: "Babay aura meyzahra lestari maaf dan terimakasih🌸🌸", input: "text", showCancelButton: false, }); if (kado) { await swal.fire("Kirim jawabannya ke wa yah"); wa(kado); } else { await swal.fire("Jangan dikosongin yahh"); tanya(); } } </script> <p class="wm"><span><a href="https://www.instagram.com/evildeye/">click for follow made by</a></span></p>
-  </body>
+  <!-- Iframe untuk audio dari YouTube -->
+  <iframe
+    id="yt-audio"
+    src=""
+    style="width:0;height:0;border:0;"
+    allow="autoplay"
+  ></iframe>
+
+  <script>
+    AOS.init({ once: true });
+
+    const ytVideoId = "NhYKUmiFSY0"; // ID video YouTube kamu
+    const ytIframe = document.getElementById("yt-audio");
+
+    function mulai() {
+      ytIframe.src = `https://www.youtube.com/embed/${ytVideoId}?autoplay=1&loop=1&playlist=${ytVideoId}`;
+      document.querySelector(".open").style = "opacity: 0;";
+      document.querySelector(".body").style = "overflow-y: scroll;";
+      setTimeout(function () {
+        document.querySelector(".open").style.display = "none";
+      }, 1000);
+    }
+
+    function wa(isi) {
+      window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(isi));
+    }
+
+    async function tanya() {
+      var { value: kado } = await Swal.fire({
+        title: "Babay aura meyzahra lestari maaf dan terimakasih🌸🌸",
+        input: "text",
+        showCancelButton: false,
+      });
+
+      if (kado) {
+        await Swal.fire("Kirim jawabannya ke wa yah");
+        wa(kado);
+      } else {
+        await Swal.fire("Jangan dikosongin yahh");
+        tanya();
+      }
+    }
+  </script>
+
+  <p class="wm"><span><a href="https://www.instagram.com/evildeye/">click for follow made by</a></span></p>
+
+</body>
+
 </html>
